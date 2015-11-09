@@ -14,7 +14,7 @@
 
 #include <Windows.h>
 
-#define LIMIT 100
+#define LIMIT 1000000
 
 /* FILETIME of Jan 1 1970 00:00:00. */
 static const unsigned __int64 epoch = ((unsigned __int64)116444736000000000ULL);
@@ -63,7 +63,7 @@ public:
 			(tvBegin.tv_usec + 1000000 * tvBegin.tv_sec);
 		seconds = diff / 1000000;
 		useconds = diff % 1000000;
-		return (diff<0) ? true : false;
+		return (diff < 0) ? true : false;
 	}
 
 private:
@@ -180,7 +180,7 @@ cl_command_queue CreateCommandQueue(cl_context context, cl_device_id *device)
 	// Get device information for each device
 	cl_device_type devType;
 	std::cout << std::endl << "Device list:" << std::endl;
-	for (int i = 0; i<numDevices; i++)
+	for (int i = 0; i < numDevices; i++)
 	{
 
 		std::cout << "   " << deviceList[i] << ": ";
@@ -331,6 +331,38 @@ void Cleanup(cl_context context, cl_command_queue commandQueue,
 
 }
 
+int main()
+{
+	size_t n = LIMIT;
+	std::vector<size_t> sieve;
+
+	CTiming timer;
+	int seconds, useconds;
+	timer.Start();
+	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
+	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
+	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
+	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
+	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
+	timer.End();
+	if (timer.Diff(seconds, useconds))
+		std::cerr << "warning: timer returned negative difference!" << std::endl;
+	std::cout << "serially ran in " << seconds << "." << useconds << " seconds" << std::endl << std::endl;
+	
+
+	//sieve = SieveOfEratosthenes::SieveOfEratosthenes::Sieve(n);
+
+	for (size_t i = 0; i < sieve.size(); i++)
+	{
+	std::cout << "" << sieve[i] << std::endl;
+	}
+
+	system("pause");
+
+	//std::cin >> n;
+
+	return 0;
+}
 
 ////	main() for HelloWorld example
 //int main(int argc, char** argv)
@@ -492,19 +524,4 @@ void Cleanup(cl_context context, cl_command_queue commandQueue,
 //}
 
 
-int main()
-{
-	size_t n = LIMIT;
-	std::vector<size_t> sieve = SieveOfEratosthenes::SieveOfEratosthenes::Sieve(n);
 
-	//sieve = SieveOfEratosthenes::SieveOfEratosthenes::Sieve(n);
-
-	for (size_t i = 0; i < sieve.size(); i++)
-	{
-		std::cout << "" << sieve[i] << std::endl;
-	}
-
-	std::cin >> n;
-
-	return 0;
-}
