@@ -1,23 +1,17 @@
-﻿Build started 11/8/2015 7:21:44 PM.
+﻿Build started 11/8/2015 7:44:16 PM.
      1>Project "C:\Users\a00824983\Documents\OpenCLSieve\Test\Test\Test.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp SieveBoth.cpp SieveCPU.cpp SieveGPU.cpp SieveOfEratosthenes.cpp
-         SieveOfEratosthenes.cpp
-         SieveGPU.cpp
-         SieveCPU.cpp
-         SieveBoth.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
          Main.cpp
-         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\a00824983\Documents\OpenCLSieve\Test\Debug\Test.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\a00824983\Documents\OpenCLSieve\Test\Debug\Test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\a00824983\Documents\OpenCLSieve\Test\Debug\Test.lib" /MACHINE:X86 Debug\Main.obj
          Debug\SieveBoth.obj
          Debug\SieveCPU.obj
          Debug\SieveGPU.obj
          Debug\SieveOfEratosthenes.obj
-     1>Main.obj : error LNK2019: unresolved external symbol "public: static class std::vector<unsigned int,class std::allocator<unsigned int> > __cdecl SieveOfEratosthenes::SieveOfEratosthenes::Sieve(unsigned int)" (?Sieve@SieveOfEratosthenes@1@SA?AV?$vector@IV?$allocator@I@std@@@std@@I@Z) referenced in function _main
-     1>C:\Users\a00824983\Documents\OpenCLSieve\Test\Debug\Test.exe : fatal error LNK1120: 1 unresolved externals
-     1>Done Building Project "C:\Users\a00824983\Documents\OpenCLSieve\Test\Test\Test.vcxproj" (Build target(s)) -- FAILED.
+         Test.vcxproj -> C:\Users\a00824983\Documents\OpenCLSieve\Test\Debug\Test.exe
+     1>Done Building Project "C:\Users\a00824983\Documents\OpenCLSieve\Test\Test\Test.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.89
+Time Elapsed 00:00:00.48

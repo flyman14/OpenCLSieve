@@ -1,7 +1,7 @@
 #include <iostream>
 #include "SieveOfEratosthenes.h"
 
-#define LIMIT 10000
+#define LIMIT 100
 
 int main()
 {
@@ -14,6 +14,8 @@ int main()
 	{
 		std::cout << "" << sieve[i] << std::endl;
 	}
+
+	std::cin >> n;
 
 	return 0;
 }

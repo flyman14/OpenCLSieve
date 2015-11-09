@@ -10,7 +10,7 @@ using namespace std;
 
 namespace SieveOfEratosthenes
 {
-	static vector<size_t> Sieve(size_t n)
+	vector<size_t> SieveOfEratosthenes::Sieve(size_t n)
 	{
 		if (n <= 1)
 		{

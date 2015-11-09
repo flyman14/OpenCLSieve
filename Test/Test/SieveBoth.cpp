@@ -5,7 +5,7 @@ using namespace std;
 
 namespace SieveOfEratosthenes
 {
-	static vector<size_t> Sieve(size_t n)
+	vector<size_t> SieveBoth::Sieve(size_t n)
 	{
 		if (n <= 1)
 		{
