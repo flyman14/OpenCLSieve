@@ -79,6 +79,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SieveBoth.h" />
+    <ClInclude Include="SieveCPU.h" />
+    <ClInclude Include="SieveGPU.h" />
     <ClInclude Include="SieveOfEratosthenes.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -92,6 +95,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SieveBoth.cpp" />
+    <ClCompile Include="SieveCPU.cpp" />
+    <ClCompile Include="SieveGPU.cpp" />
     <ClCompile Include="SieveOfEratosthenes.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

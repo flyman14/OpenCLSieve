@@ -13,8 +13,4 @@ namespace SieveOfEratosthenes
 
 	}
 
-	static int* GetPrimes(int n)
-	{
-
-	}
 }
