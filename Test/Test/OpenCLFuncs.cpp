@@ -323,6 +323,22 @@ bool OpenCLFuncs::CreateMemObjects(cl_context context, cl_mem memObjects[3],
 	return true;
 }
 
+bool OpenCLFuncs::CreateMemObjectsForSieve(cl_context context, cl_mem memObjects[2], int limit)
+{
+	memObjects[0] = clCreateBuffer(context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR,
+		sizeof(int), &limit, NULL);
+	memObjects[1] = clCreateBuffer(context, CL_MEM_READ_WRITE,
+		sizeof(int), NULL, NULL);
+
+	if (memObjects[0] == NULL || memObjects[1] == NULL)
+	{
+		std::cerr << "Error creating memory objects." << std::endl;
+		return false;
+	}
+
+	return true;
+}
+
 
 
 //  Cleanup any created OpenCL resources
@@ -330,6 +346,29 @@ void OpenCLFuncs::Cleanup(cl_context context, cl_command_queue commandQueue,
 	cl_program program, cl_kernel kernel, cl_mem memObjects[3])
 {
 	for (int i = 0; i < 3; i++)
+	{
+		if (memObjects[i] != 0)
+			clReleaseMemObject(memObjects[i]);
+	}
+	if (commandQueue != 0)
+		clReleaseCommandQueue(commandQueue);
+
+	if (kernel != 0)
+		clReleaseKernel(kernel);
+
+	if (program != 0)
+		clReleaseProgram(program);
+
+	if (context != 0)
+		clReleaseContext(context);
+
+}
+
+//  Cleanup any created OpenCL resources
+void OpenCLFuncs::CleanupSieve(cl_context context, cl_command_queue commandQueue,
+	cl_program program, cl_kernel kernel, cl_mem memObjects[2])
+{
+	for (int i = 0; i < 2; i++)
 	{
 		if (memObjects[i] != 0)
 			clReleaseMemObject(memObjects[i]);

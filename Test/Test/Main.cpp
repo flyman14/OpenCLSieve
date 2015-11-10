@@ -342,10 +342,6 @@ int main()
 	int seconds, useconds;
 	timer.Start();
 	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
-	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
-	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
-	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
-	SieveOfEratosthenes::SieveOfEratosthenes::segmented_sieve(LIMIT);
 	timer.End();
 	if (timer.Diff(seconds, useconds))
 		std::cerr << "warning: timer returned negative difference!" << std::endl;
@@ -365,11 +361,11 @@ int main()
 
 	return 0;
 }
-
-//  Constants
-const int ARRAY_SIZE = 10;
-int array_size = 0;
 //
+////  Constants
+//const int ARRAY_SIZE = 10;
+//int array_size = 0;
+////
 ////	main() for HelloWorld example
 //int main(int argc, char** argv)
 //{
