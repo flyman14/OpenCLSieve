@@ -14,7 +14,7 @@ using namespace std;
 
 namespace SieveOfEratosthenes
 {
-	vector<size_t> SieveOfEratosthenes::Sieve(size_t n)
+	int SieveOfEratosthenes::Sieve(size_t n)
 	{
 		if (n <= 1)
 		{
@@ -55,7 +55,7 @@ namespace SieveOfEratosthenes
 			}
 		}
 
-		return sieve;
+		return sieve.size();
 	}
 
 	/// Generate primes using the segmented sieve of Eratosthenes.

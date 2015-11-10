@@ -1,7 +1,5 @@
 #include "OpenCLFuncs.h"
 
-
-
 // Function to check return value of OpenCL calls and
 // output custom error message to cerr
 bool OpenCLFuncs::CheckOpenCLError(cl_int errNum, const char *errMsg)

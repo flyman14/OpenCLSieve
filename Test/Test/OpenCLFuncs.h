@@ -60,6 +60,7 @@ public:
 
 
 	static const int ARRAY_SIZE = 10;
-	
+
+	static const int array_size = 1024;
 };
 

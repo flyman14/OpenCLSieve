@@ -12,28 +12,34 @@ __kernel void main_kernel(__global const int *n,
 		result[gid] = 0;
 	}
 
-	char A[1000000];
-	A[0] = '0';
-	A[1] = '1';  
+	char A[100];
+	A[0] = 0;
+	A[1] = 1;  
 
-	for(int i=2; i<limit; i++)
+	for(int i=2; i<100; i++)
 	{
 		A[i] = true;
 	}
 
-	for(int i=2; i<=1000; i++)
+	for(int t=2; t<=10; t++)
 	{
-		if (A[i]=='1')
+		if (A[t]==1)
 		{
-			count++;
-			for(int j=i*i; j<=limit; j = j+i)
+			
+			for(int j=t*t; j<=100; j = j+t)
 			{
-				A[J] = '0';
+				A[j] = 0;
 			}
 		}
 	}
 
-
+	for(int i=2; i<100; i++)
+	{
+		if (A[i]==1)
+		{
+			count++;
+		}
+	}
 
     result[gid] = count;
 }
