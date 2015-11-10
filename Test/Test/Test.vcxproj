@@ -156,12 +156,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="OpenCLFuncs.cpp" />
     <ClCompile Include="SieveBoth.cpp" />
     <ClCompile Include="SieveCPU.cpp" />
     <ClCompile Include="SieveGPU.cpp" />
     <ClCompile Include="SieveOfEratosthenes.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="OpenCLFuncs.h" />
     <ClInclude Include="SieveBoth.h" />
     <ClInclude Include="SieveCPU.h" />
     <ClInclude Include="SieveGPU.h" />
