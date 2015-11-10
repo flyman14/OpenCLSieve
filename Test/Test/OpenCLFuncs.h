@@ -22,6 +22,14 @@ class OpenCLFuncs
 public:
 	/* Function to check return value of OpenCL calls and output custom error message to cerr */
 	static bool CheckOpenCLError(cl_int errNum, const char *errMsg);
+
+	/*  Create an OpenCL context on the first available platform using
+	    a GPU. */
+	static cl_context CreateContextGPU();
+
+	/*  Create an OpenCL context on the first available platform using
+	    a CPU. */
+	static cl_context CreateContextCPU();
 	
 	/* Create an OpenCL context on the first available platform using either a GPU or CPU depending on what is available. */
 	static cl_context CreateContext();

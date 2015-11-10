@@ -1,4 +1,4 @@
-﻿Build started 11/9/2015 4:38:29 PM.
+﻿Build started 11/9/2015 4:49:12 PM.
      1>Project "C:\Users\a00824983\Documents\OpenCLSieve\Test\Test\Test.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files (x86)\AMD APP SDK\3.0\\include" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt Main.cpp OpenCLFuncs.cpp
@@ -18,4 +18,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.77
+Time Elapsed 00:00:01.21
